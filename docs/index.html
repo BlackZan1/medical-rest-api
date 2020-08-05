@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Docs</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div>
+            <h1>Documentation - RESTfull API</h1>
+            <br>
+
+            <div class="block">
+                <h3>Doctors ---</h3>
+
+                <div class="col">
+                    <span>/api/doctors</span>
+
+                    <span class="badge get">GET</span>
+                </div>
+
+                <pre>
+                    {
+                        "count": 3,
+                        "doctors": [
+                          {
+                            "doctorImage": "uploads/images/i3spjqa1b.jpeg",
+                            "awards": 8,
+                            "experienceInYears": 17,
+                            "chargesInUSD": 100,
+                            "rating": 4.5,
+                            "_id": "5f0d9c7956b0801f5cea10ee",
+                            "fullname": "Eleonora Switch",
+                            "role": "CEO & Founder",
+                            "position": "Head of Department",
+                            "specialty": "Orthologist Specilist",
+                            "education": "MBBS, MD",
+                            "about": "Eleonora Switch is a really professional doctor and outgoing person",
+                            "createdAt": "2020-07-14T11:52:25.847Z",
+                            "updatedAt": "2020-07-14T11:52:25.847Z"
+                          },
+                          { --- },
+                          { --- }
+                        ],
+                        "request": {
+                          "type": "GET"
+                        }
+                      }
+                </pre>
+
+                <div class="col">
+                    <span>/api/doctors</span>
+
+                    <span class="badge post">POST</span>
+                </div>
+
+                <pre>
+                    {
+                        "message": "Created Successfully",
+                        "result": {
+                          "doctorImage": "uploads/images/2vl1r1a0his.jpeg",
+                          "awards": 2,
+                          "experienceInYears": 2,
+                          "chargesInUSD": 50,
+                          "rating": 0,
+                          "_id": "5f0eb1806d42e31cec3644bf",
+                          "fullname": "Leonardo Anderson",
+                          "role": "Intern",
+                          "position": "Intern of Department",
+                          "specialty": "Surgery Specilist",
+                          "education": "MBBS, US",
+                          "about": "123123123 - pip pop",
+                          "createdAt": "2020-07-15T07:34:24.394Z",
+                          "updatedAt": "2020-07-15T07:34:24.394Z"
+                        },
+                        "request": {
+                          "type": "POST"
+                        }
+                    }
+                </pre>
+
+                <div class="col">
+                    <span>/api/doctors/{id}</span>
+
+                    <span class="badge get">GET</span>
+                </div>
+
+                <pre>
+                    {
+                        "doctor": {
+                          "doctorImage": "uploads/images/gca6ecqohov.png",
+                          "awards": 12,
+                          "experienceInYears": 22,
+                          "chargesInUSD": 250,
+                          "rating": 5,
+                          "_id": "5f0da705dcc55b2198ddf263",
+                          "fullname": "Daniel Barnes",
+                          "role": "Lead",
+                          "position": "Lead of Department",
+                          "specialty": "Super-Puper Specilist",
+                          "education": "MBBS, MD",
+                          "about": "Daniel Barnes is a really super doctor and beauty person",
+                          "createdAt": "2020-07-14T12:37:25.624Z",
+                          "updatedAt": "2020-07-14T12:37:25.624Z"
+                        },
+                        "request": {
+                          "type": "GET"
+                        }
+                    }
+                </pre>
+
+                <div class="col">
+                    <span>/api/doctors/{id}</span>
+
+                    <span class="badge delete">DELETE</span>
+                </div>
+
+                <pre>
+                    {
+                        "message": "Deleted Successfully",
+                        "request": {
+                          "type": "DELETE"
+                        }
+                    }
+                </pre>
+            </div>
+
+            <hr>
+            <br>
+
+            <div class="block">
+                <h3>Appointments ---</h3>
+
+                <div class="col">
+                    <span>/api/appointments</span>
+
+                    <span class="badge get">GET</span>
+                </div>
+
+                <pre>
+                    {
+                        "count": 2,
+                        "appointments": [
+                          {
+                            "_id": "5f0ea2eac5de981a04a0ccb3",
+                            "doctor": "5f0da705dcc55b2198ddf263",
+                            "date": "2020-07-15T06:30:17.378Z",
+                            "clientName": "Nazar",
+                            "clientEmail": "nazar.saa_a@mail.com",
+                            "mobileNumber": "701701701231",
+                            "department": "Dermatologist",
+                            "createdAt": "2020-07-15T06:32:10.454Z",
+                            "updatedAt": "2020-07-15T06:32:10.454Z"
+                          },
+                          {
+                            "_id": "5f0ea819bde4800558cbaf2f",
+                            "doctor": "5f0ddc50107d8416b894bd7c",
+                            "date": "2021-07-15T06:30:17.378Z",
+                            "clientName": "Lolo Maria Ellison",
+                            "clientEmail": "maria.ellison@gmail.com",
+                            "mobileNumber": "1231232312",
+                            "department": "Octalogist",
+                            "createdAt": "2020-07-15T06:54:17.774Z",
+                            "updatedAt": "2020-07-15T06:54:17.774Z"
+                          }
+                        ],
+                        "request": {
+                          "type": "GET"
+                        }
+                      }
+                </pre>
+
+                <div class="col">
+                    <span>/api/appointments</span>
+
+                    <span class="badge post">POST</span>
+                </div>
+
+                <p>Properties:</p>
+                <ul>
+                    <li>doctor - <span>required</span>(doctorId)</li>
+                    <li>date - <span>required</span>(string)</li>
+                    <li>clientName - <span>required</span>(string)</li>
+                    <li>clientEmail - <span>required</span>(string)</li>
+                    <li>mobileNumber - <span>required</span>(string)</li>
+                    <li>department - <span>required</span>(string)</li>
+                </ul>
+
+                <p>In JSON variation</p>
+
+                <pre>
+                    {
+                        "message": "Created Successfully",
+                        "result": {
+                          "_id": "5f0eaf907429170744067192",
+                          "doctor": "5f0ddc50107d8416b894bd7c",
+                          "date": "2021-07-15T06:30:17.378Z",
+                          "clientName": "MariaOOO",
+                          "clientEmail": "maria.ellison@gmail.com",
+                          "mobileNumber": "1231232312",
+                          "department": "Octalogist",
+                          "createdAt": "2020-07-15T07:26:08.160Z",
+                          "updatedAt": "2020-07-15T07:26:08.160Z"
+                        },
+                        "request": {
+                          "type": "POST"
+                        }
+                      }
+                </pre>
+
+                <div class="col">
+                    <span>/api/appointments/{id}</span>
+
+                    <span class="badge get">GET</span>
+                </div>
+
+                <pre>
+                    {
+                        "appointment": {
+                          "_id": "5f0ea819bde4800558cbaf2f",
+                          "doctor": "5f0ddc50107d8416b894bd7c",
+                          "date": "2021-07-15T06:30:17.378Z",
+                          "clientName": "Lolo Maria Ellison",
+                          "clientEmail": "maria.ellison@gmail.com",
+                          "mobileNumber": "1231232312",
+                          "department": "Octalogist",
+                          "createdAt": "2020-07-15T06:54:17.774Z",
+                          "updatedAt": "2020-07-15T06:54:17.774Z"
+                        },
+                        "request": {
+                          "type": "GET"
+                        }
+                    }
+                </pre>
+
+                <div class="col">
+                    <span>/api/appointments/{id}</span>
+
+                    <span class="badge delete">DELETE</span>
+                </div>
+
+                <pre>
+                    {
+                        "message": "Deleted Successfully",
+                        "request": {
+                          "type": "DELETE"
+                        }
+                    }
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+pre{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    margin-bottom: 10px;
+    overflow: auto;
+    background-color: #323232;
+    width: max-content;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 40px;
+    margin-left: -120px;
+    max-height: 600px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.block {
+    margin: 20px 0;
+}
+
+.col {
+    font-size: 20px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.col:hover {
+    background: #dcdcdc;
+}
+
+.badge {
+    border-radius: 0;
+    text-transform: uppercase;
+    width: 55px;
+    padding: 5px 0;
+    font-weight: normal;
+    color: #f3f3f6;
+    line-height: normal;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.get {
+    background: green;
+}
+
+.delete {
+    background: crimson;
+}
+
+.post {
+    background: dodgerblue;
+}
+
+.patch {
+    background: goldenrod;
+}
+
+p, li {
+    font-size: 18px;
+}
+
+ul span {
+    color: crimson;
+}
